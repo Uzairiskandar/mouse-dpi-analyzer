@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Mouse DPI Analyzer | Accuracy Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Mouse DPI Analyzer</h1>
+    <p class="description">
+        Measure your mouse's hardware sensitivity with precision. Follow the steps below to calculate your real-time DPI (Dots Per Inch).
+    </p>
+
+    <div class="settings">
+        <div class="input-group">
+            <label for="targetDistance">Physical Distance (Inches):</label>
+            <input type="number" id="targetDistance" value="1" min="0.5" step="0.1">
+        </div>
+    </div>
+
+    <div class="track-area" id="trackArea">
+        <p id="instruction-text">Click and drag your mouse horizontally</p>
+        <div id="status-badge">Idle</div>
+    </div>
+
+    <div class="results-container">
+        <div class="card">
+            <span class="label">Distance Moved</span>
+            <div class="value"><span id="pixelsCount">0</span> <small>Pixels</small></div>
+        </div>
+        <div class="card highlight">
+            <span class="label">Calculated DPI</span>
+            <div class="value" id="dpiResult">0</div>
+        </div>
+    </div>
+
+    <button id="resetBtn" class="btn-reset">Clear Data</button>
+
+    <div class="guide-section">
+        <h3>How to use this tool:</h3>
+        <ul>
+            <li>Place your mouse at the start of a physical ruler.</li>
+            <li>Click and hold inside the tracking box.</li>
+            <li>Move your mouse exactly <strong>1 inch</strong> (or your chosen distance) to the right.</li>
+            <li>Release the button to see your actual DPI.</li>
+        </ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
